@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Bloodbath Diablos</title>
+        <style>
+            html, body { height: 100%; margin: 0; }
+            body {
+                /* Un único degradado que no se repite al hacer scroll */
+                background: linear-gradient(to bottom, #38261d 0%, #865d49 100%) no-repeat fixed;
+                background-size: cover;
+                min-height: 100vh;
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+                padding: 2rem;
+            }
+            h1 { 
+                color: #FFD700; margin: 0 0 1rem 0; 
+                font-family: "Algerian";
+                text-align: center;
+                font-size: 2.5rem;
+            }
+            .detail .media {
+                flex: 0 0 480px; /* reserva espacio para la imagen cuando haya espacio */
+                max-width: 48%;
+            }
+            .detail .media img {
+                width: auto;
+                height: 400px;
+                display: block;
+                border-radius: 8px;
+                box-shadow: 0 10px 18px rgba(0,0,0,0.45);
+                background: rgba(255,255,255,0.03);
+            }
+            .detail .text h2{
+                color: #f7d387;
+                text-align: left;
+            }
+            .detail .text p { 
+                line-height: 1.5; margin: 0 0 1rem 0; 
+                color: #fcf3cc;
+                text-align: left;
+            }
+            /* Si un <p> aparece inmediatamente después de un <h2>, mostrarlo a la derecha del h2 */
+            .detail .text h2 {
+                display: inline-block;
+                margin: 0;
+            }
+            .detail .text h2 + p {
+                display: inline-block;
+                margin-left: 0.75rem;
+                margin-top: 0; /* evitar margen superior que rompa la alineación */
+            }
+            @media (max-width: 600px) {
+                 /* En pantallas pequeñas, volver a mostrar en bloque (apilar) */
+                .detail .text h2,
+                .detail .text h2 + p {
+                    display: block;
+                    margin-left: 0;
+                }
+                .detail .media { flex-basis: 100%; max-width: 100%; }
+                .detail .text { flex-basis: 100%; }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Bloodbath Diablos</h1>
+        <div class="detail">
+            <div class="media">
+                <img src="Images/Bloodbath_diablos.jpg" alt="Bloodbath Diablos">
+            </div>
+            <div class="text">
+                <h2>Alias:</h2> <p>"Demonio Masacre", "Cuernos de la Ira"</p> <br/>
+                <h2>Elemento:</h2> <p>Ninguno</p> <br/>
+                <h2>Especie:</h2> <p>Neopteron</p> <br/>
+                <h2>Hábitat:</h2> <p>Desierto</p> <br/>
+                <h2>Debilidad:</h2> <p>Agua</p> <br/>
+                <h2>Habilidades especiales:</h2> <p>Ninguna</p> <br/>
+                <h2>Otras variantes:</h2> <p>Diablos, Black Diablos</p> <br/>
+                <h2>Juego de orígen:</h2> <p>Monster Hunter Generations Ultimate</p> <br/>
+            </div>
+        </div>
+    </body>
+</html>
